@@ -16,6 +16,16 @@ courtesy of the [Buf][buf-url] team.
 
 React Email™ provides a few advantages and nice features:
 
+> A collection of high-quality, unstyled components for creating beautiful
+> emails using React and TypeScript. It reduces the pain of coding
+> **responsive** emails with dark mode support. It also takes care of
+> **inconsistencies** between Gmail, Outlook, and other email clients for you.
+>
+> We believe that email is an extremely important medium for people to
+> communicate. However, we need to **stop developing emails like 2010**, and
+> rethink how email can be done in 2022 and beyond. Email development needs a
+> revamp. A renovation. **Modernized** for the way we build web apps today.
+
 - Devs feel at home with React.
 - We get to bring our own styling (e.g., Tailwind).
 - We get a nice platform to view and manage all our emails for free.
