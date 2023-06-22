@@ -32,6 +32,17 @@ up to 3000 emails per month, as well as other amazing quality features.
 
 For Go projects, Resend has a nice [SDK][resend-docs-go-url].
 
+## How does this project fit into your architecture?
+
+Typically, platforms send emails as a reaction to some _event_, such as a new
+user signing up.
+
+My imagined architecture is that some existing workflow in your platform that's
+already detecting an _event_ can take two additional steps:
+
+1. Make an HTTP / gRPC request to render an email.
+2. Call the Resend API to send the email.
+
 <p align="center">
 <img width="400" alt="Screenshot of Potential Architecture" src="https://github.com/kevinmichaelchen/react-email-server/assets/5129994/6d882ea1-e34f-4d2c-9367-ca1d50819fbb">
 </p>
