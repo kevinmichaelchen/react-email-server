@@ -10,6 +10,25 @@ and [Connect][connect-url].
 Most of this code was pulled from the [Connect Node][connect-node-url] guide,
 courtesy of the [Buf][buf-url] team.
 
+## Why is this useful?
+
+[React Email™][react-email-url] is a next-generation mechanism for rendering
+beautiful emails using [React][react-url] and Typescript.
+
+Main advantages:
+
+- Devs feel at home with React.
+- We get to bring our own styling (e.g., Tailwind).
+- We get a nice platform to view and manage all our emails for free.
+
+## How are emails sent?
+
+React Email provides multiple [examples][react-email-integrations-url] of
+integrating with 3rd-party email services.
+
+For small projects, [Resend][resend-url] has free [pricing][resend-pricing-url]
+up to 3000 emails per month, as well as other amazing quality features.
+
 ## Getting started
 
 ### Run the server
@@ -46,4 +65,7 @@ open output.html
 [fastify-url]: https://www.fastify.io/
 [nodejs-url]: https://nodejs.org/en
 [react-url]: https://react.dev/
+[react-email-integrations-url]: https://react.email/docs/integrations/overview
 [react-email-url]: https://react.email/
+[resend-url]: https://resend.com
+[resend-pricing-url]: https://resend.com/pricing
