@@ -34,6 +34,25 @@ React Email™ provides a few advantages and nice features:
 <img width="400" alt="Screenshot of React Email UI" src="https://github.com/kevinmichaelchen/react-email-server/assets/5129994/fb5067ed-d4a8-4ae5-9b41-9bbcf75c2583">
 </p>
 
+### How does this project fit into your architecture?
+
+Typically, platforms send emails as a reaction to some _event_, such as a new
+user signing up.
+
+This service is simply an email rendering API. If you wanted to, you could
+easily augment functionality with email sending or a request to a transactional
+email service, such as Resend.
+
+My imagined architecture is that some existing workflow in your platform that's
+already detecting an _event_ can take two additional steps:
+
+1. Make an HTTP / gRPC request **_to this service_** to render an email.
+2. Call the Resend API to send the email.
+
+<p align="center">
+<img width="400" alt="Screenshot of Potential Architecture" src="https://github.com/kevinmichaelchen/react-email-server/assets/5129994/6d882ea1-e34f-4d2c-9367-ca1d50819fbb">
+</p>
+
 ### How are emails sent?
 
 React Email provides multiple [examples][react-email-integrations-url] of
@@ -62,25 +81,6 @@ called [Resend][resend-url]. It has a number of nice features:
     your user)
   - Increased resilience
   - No need to juggle multiple accounts — one per region
-
-### How does this project fit into your architecture?
-
-Typically, platforms send emails as a reaction to some _event_, such as a new
-user signing up.
-
-This service is simply an email rendering API. If you wanted to, you could
-easily augment functionality with email sending or a request to a transactional
-email service, such as Resend.
-
-My imagined architecture is that some existing workflow in your platform that's
-already detecting an _event_ can take two additional steps:
-
-1. Make an HTTP / gRPC request **_to this service_** to render an email.
-2. Call the Resend API to send the email.
-
-<p align="center">
-<img width="400" alt="Screenshot of Potential Architecture" src="https://github.com/kevinmichaelchen/react-email-server/assets/5129994/6d882ea1-e34f-4d2c-9367-ca1d50819fbb">
-</p>
 
 ## Getting started
 
