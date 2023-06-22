@@ -29,6 +29,17 @@ curl \
    http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/CreateWelcomeEmail
 ```
 
+### Viewing the HTML output
+
+```shell
+curl \
+  --header 'Content-Type: application/json' \
+  --data '{"name": "Kevin"}' \
+   http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/CreateWelcomeEmail | jq -r '.html' > output.html
+
+open output.html
+```
+
 [buf-url]: https://buf.build/
 [connect-url]: https://connect.build/
 [connect-node-url]: https://connect.build/docs/node/getting-started/
