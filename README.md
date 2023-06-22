@@ -27,7 +27,7 @@ React Email™ provides a few advantages and nice features:
 > revamp. A renovation. **Modernized** for the way we build web apps today.
 
 - Devs feel at home with React.
-- We get to bring our own styling (e.g., Tailwind).
+- We get to bring our own styling (e.g., [Tailwind][resend-tailwind-url]).
 - We get a nice platform to view and manage all our emails for free.
 
 <p align="center">
@@ -39,15 +39,38 @@ React Email™ provides a few advantages and nice features:
 React Email provides multiple [examples][react-email-integrations-url] of
 integrating with 3rd-party email services.
 
-For small projects, [Resend][resend-url] has free [pricing][resend-pricing-url]
-up to 3000 emails per month, as well as other amazing quality features.
+#### Why use Resend?
 
-For Go projects, Resend has a nice [SDK][resend-docs-go-url].
+The maintainers of React Email have built a transactional email SaaS platform
+called [Resend][resend-url]. It has a number of nice features:
+
+- Affordable
+  - [Free][resend-pricing-url] up to 3000 emails per month
+- Wide language support (lots of [SDKs][resend-docs-go-url])
+- [Send emails with your own domain][resend-blog-domain-verification]
+- [Open and click tracking][resend-blog-open-click-tracking]
+- [Notifications integrations][resend-blog-notifications-integrations]
+  - https://novu.co/
+  - https://knock.app/
+- [Track bounces and other email events][resend-blog-email-events]
+- [Dedicated IPs][resend-blog-dedicated-ips]
+  - Increased deliverability
+  - Improved Sender Reputation
+  - Increased Security
+- [Multi-region][resend-blog-multi-region]
+  - Faster delivery, reduced latency (sending emails from the region closest to
+    your user)
+  - Increased resilience
+  - No need to juggle multiple accounts — one per region
 
 ### How does this project fit into your architecture?
 
 Typically, platforms send emails as a reaction to some _event_, such as a new
 user signing up.
+
+This service is simply an email rendering API. If you wanted to, you could
+easily augment functionality with email sending or a request to a transactional
+email service, such as Resend.
 
 My imagined architecture is that some existing workflow in your platform that's
 already detecting an _event_ can take two additional steps:
@@ -97,6 +120,16 @@ open output.html
 [react-url]: https://react.dev/
 [react-email-integrations-url]: https://react.email/docs/integrations/overview
 [react-email-url]: https://react.email/
+[resend-blog-domain-verification]:
+  https://resend.com/blog/new-domain-verification-experience
+[resend-blog-open-click-tracking]:
+  https://resend.com/blog/open-and-click-tracking
+[resend-blog-notifications-integrations]:
+  https://resend.com/blog/new-integrations
+[resend-blog-email-events]: https://resend.com/blog/webhooks
+[resend-blog-dedicated-ips]: https://resend.com/blog/dedicated-ips
+[resend-blog-multi-region]: https://resend.com/blog/multi-region
 [resend-docs-go-url]: https://resend.com/docs/send-with-go
+[resend-tailwind-url]: https://resend.com/blog/tailwind-with-react-email
 [resend-url]: https://resend.com
 [resend-pricing-url]: https://resend.com/pricing
