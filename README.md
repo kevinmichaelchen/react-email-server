@@ -40,6 +40,10 @@ curl \
 open output.html
 ```
 
+<!---
+your comment goes here and here
+-->
+
 [buf-url]: https://buf.build/
 [connect-url]: https://connect.build/
 [connect-node-url]: https://connect.build/docs/node/getting-started/
