@@ -25,8 +25,8 @@ Hit the server on port 8080:
 ```bash
 curl \
   --header 'Content-Type: application/json' \
-  --data '{"sentence": "I feel happy."}' \
-   http://localhost:8080/buf.connect.demo.eliza.v1.ElizaService/Say
+  --data '{"name": "Kevin"}' \
+   http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/CreateWelcomeEmail
 ```
 
 [buf-url]: https://buf.build/

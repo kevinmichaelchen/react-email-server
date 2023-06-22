@@ -2,6 +2,11 @@
 # when you run the make command without any arguments.
 .DEFAULT_GOAL := help
 
+## generate : Generate protobufs
+.PHONY: generate
+generate:
+	npx buf generate proto
+
 ## install  : Installs NPM dependencies
 .PHONY: install
 install:
@@ -12,7 +17,7 @@ install:
 start: install
 	npm start
 
-## format: Formats code
+## format   : Formats code
 .PHONY: format
 format:
 	npx prettier --write "**/*.md" --prose-wrap always
