@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { ConnectRouter } from "@bufbuild/connect";
 import { EmailService } from "./gen/api_connect";
 
