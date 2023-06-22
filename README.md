@@ -12,10 +12,7 @@ courtesy of the [Buf][buf-url] team.
 
 ## Why is this useful?
 
-[React Email™][react-email-url] is a next-generation mechanism for rendering
-beautiful emails using [React][react-url] and Typescript.
-
-Main advantages:
+React Email™ provides a few advantages and nice features:
 
 - Devs feel at home with React.
 - We get to bring our own styling (e.g., Tailwind).
