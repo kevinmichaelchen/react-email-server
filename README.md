@@ -42,7 +42,7 @@ user signing up.
 My imagined architecture is that some existing workflow in your platform that's
 already detecting an _event_ can take two additional steps:
 
-1. Make an HTTP / gRPC request to render an email.
+1. Make an HTTP / gRPC request **_to this service_** to render an email.
 2. Call the Resend API to send the email.
 
 <p align="center">
