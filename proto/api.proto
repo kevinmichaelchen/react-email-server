@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package buf.connect.demo.eliza.v1;
+
+service EmailService {
+  rpc CreateWelcomeEmail(CreateWelcomeEmailRequest) returns (CreateWelcomeEmailResponse) {}
+}
+
+message CreateWelcomeEmailRequest {
+  string name = 1;
+}
+
+message CreateWelcomeEmailResponse {
+  string html = 1;
+}

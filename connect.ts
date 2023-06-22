@@ -1,13 +1,13 @@
 import { ConnectRouter } from "@bufbuild/connect";
-import { ElizaService } from "./gen/eliza_connect";
+import { EmailService } from "./gen/api_connect";
 
 export default (router: ConnectRouter) =>
-  // registers buf.connect.demo.eliza.v1.ElizaService
-  router.service(ElizaService, {
-    // implements rpc Say
-    async say(req) {
+  // registers buf.connect.demo.eliza.v1.EmailService
+  router.service(EmailService, {
+    // implements rpc CreateWelcomeEmail
+    async createWelcomeEmail(req) {
       return {
-        sentence: `You said: ${req.sentence}`
+        html: `You said: ${req.name}`
       }
     },
   });
