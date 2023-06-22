@@ -30,6 +30,12 @@ integrating with 3rd-party email services.
 For small projects, [Resend][resend-url] has free [pricing][resend-pricing-url]
 up to 3000 emails per month, as well as other amazing quality features.
 
+For Go projects, Resend has a nice [SDK][resend-docs-go-url].
+
+<p align="center">
+<img width="400" alt="Screenshot of Potential Architecture" src="https://github.com/kevinmichaelchen/react-email-server/assets/5129994/6d882ea1-e34f-4d2c-9367-ca1d50819fbb">
+</p>
+
 ## Getting started
 
 ### Run the server
@@ -68,5 +74,6 @@ open output.html
 [react-url]: https://react.dev/
 [react-email-integrations-url]: https://react.email/docs/integrations/overview
 [react-email-url]: https://react.email/
+[resend-docs-go-url]: https://resend.com/docs/send-with-go
 [resend-url]: https://resend.com
 [resend-pricing-url]: https://resend.com/pricing
