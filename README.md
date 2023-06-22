@@ -10,7 +10,9 @@ and [Connect][connect-url].
 Most of this code was pulled from the [Connect Node][connect-node-url] guide,
 courtesy of the [Buf][buf-url] team.
 
-## Why is this useful?
+## FAQ
+
+### Why is this useful?
 
 React Email™ provides a few advantages and nice features:
 
@@ -22,7 +24,7 @@ React Email™ provides a few advantages and nice features:
 <img width="400" alt="Screenshot of React Email UI" src="https://github.com/kevinmichaelchen/react-email-server/assets/5129994/fb5067ed-d4a8-4ae5-9b41-9bbcf75c2583">
 </p>
 
-## How are emails sent?
+### How are emails sent?
 
 React Email provides multiple [examples][react-email-integrations-url] of
 integrating with 3rd-party email services.
@@ -32,7 +34,7 @@ up to 3000 emails per month, as well as other amazing quality features.
 
 For Go projects, Resend has a nice [SDK][resend-docs-go-url].
 
-## How does this project fit into your architecture?
+### How does this project fit into your architecture?
 
 Typically, platforms send emails as a reaction to some _event_, such as a new
 user signing up.
