@@ -63,24 +63,16 @@ integrating with 3rd-party email services.
 The maintainers of React Email have built a transactional email SaaS platform
 called [Resend][resend-url]. It has a number of nice features:
 
-- Affordable
-  - [Free][resend-pricing-url] up to 3000 emails per month
+- Affordable ([free][resend-pricing-url] up to 3000 emails per month)
 - Wide language support (lots of [SDKs][resend-docs-go-url])
 - [Send emails with your own domain][resend-blog-domain-verification]
 - [Open and click tracking][resend-blog-open-click-tracking]
 - [Notifications integrations][resend-blog-notifications-integrations]
-  - https://novu.co/
-  - https://knock.app/
 - [Track bounces and other email events][resend-blog-email-events]
-- [Dedicated IPs][resend-blog-dedicated-ips]
-  - Increased deliverability
-  - Improved Sender Reputation
-  - Increased Security
-- [Multi-region][resend-blog-multi-region]
-  - Faster delivery, reduced latency (sending emails from the region closest to
-    your user)
-  - Increased resilience
-  - No need to juggle multiple accounts — one per region
+- [Dedicated IPs][resend-blog-dedicated-ips] for improved deliverability /
+  sender reputation
+- [Multi-region][resend-blog-multi-region] for reduced latency, imporved
+  resilience.
 
 ## Getting started
 
