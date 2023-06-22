@@ -18,6 +18,8 @@ React Email™ provides a few advantages and nice features:
 - We get to bring our own styling (e.g., Tailwind).
 - We get a nice platform to view and manage all our emails for free.
 
+<img width="400" alt="Screenshot of React Email UI" src="https://github.com/kevinmichaelchen/react-email-server/assets/5129994/fb5067ed-d4a8-4ae5-9b41-9bbcf75c2583">
+
 ## How are emails sent?
 
 React Email provides multiple [examples][react-email-integrations-url] of
