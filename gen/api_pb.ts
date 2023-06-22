@@ -7,11 +7,55 @@ import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialM
 import { Message, proto3 } from "@bufbuild/protobuf";
 
 /**
+ * @generated from message buf.connect.demo.eliza.v1.RenderOptions
+ */
+export class RenderOptions extends Message<RenderOptions> {
+  /**
+   * Whether the email output is beautified.
+   *
+   * @generated from field: bool pretty = 1;
+   */
+  pretty = false;
+
+  constructor(data?: PartialMessage<RenderOptions>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "buf.connect.demo.eliza.v1.RenderOptions";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "pretty", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): RenderOptions {
+    return new RenderOptions().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): RenderOptions {
+    return new RenderOptions().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): RenderOptions {
+    return new RenderOptions().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: RenderOptions | PlainMessage<RenderOptions> | undefined, b: RenderOptions | PlainMessage<RenderOptions> | undefined): boolean {
+    return proto3.util.equals(RenderOptions, a, b);
+  }
+}
+
+/**
  * @generated from message buf.connect.demo.eliza.v1.CreateWelcomeEmailRequest
  */
 export class CreateWelcomeEmailRequest extends Message<CreateWelcomeEmailRequest> {
   /**
-   * @generated from field: string name = 1;
+   * @generated from field: buf.connect.demo.eliza.v1.RenderOptions options = 1;
+   */
+  options?: RenderOptions;
+
+  /**
+   * @generated from field: string name = 2;
    */
   name = "";
 
@@ -23,7 +67,8 @@ export class CreateWelcomeEmailRequest extends Message<CreateWelcomeEmailRequest
   static readonly runtime: typeof proto3 = proto3;
   static readonly typeName = "buf.connect.demo.eliza.v1.CreateWelcomeEmailRequest";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 1, name: "options", kind: "message", T: RenderOptions },
+    { no: 2, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateWelcomeEmailRequest {

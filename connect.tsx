@@ -11,8 +11,8 @@ export default (router: ConnectRouter) =>
     // implements rpc CreateWelcomeEmail
     async createWelcomeEmail(req) {
       const name = req.name;
-      const html = render(<NotionMagicLinkEmail />, {
-        pretty: true,
+      const html = render(<NotionMagicLinkEmail loginCode={name} />, {
+        pretty: req.options?.pretty ?? false,
       });
       return {
         html: html

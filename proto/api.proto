@@ -6,8 +6,14 @@ service EmailService {
   rpc CreateWelcomeEmail(CreateWelcomeEmailRequest) returns (CreateWelcomeEmailResponse) {}
 }
 
+message RenderOptions {
+  // Whether the email output is beautified.
+  bool pretty = 1;
+}
+
 message CreateWelcomeEmailRequest {
-  string name = 1;
+  RenderOptions options = 1;
+  string name = 2;
 }
 
 message CreateWelcomeEmailResponse {
