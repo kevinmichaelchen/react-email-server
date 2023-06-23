@@ -2,6 +2,15 @@
 # when you run the make command without any arguments.
 .DEFAULT_GOAL := help
 
+.PHONY: help
+help : Makefile
+	@sed -n 's/^##//p' $<
+
+## gallery  : View gallery of email templates
+.PHONY: gallery
+gallery:
+	npm run dev
+
 ## generate : Generate protobufs
 .PHONY: generate
 generate:

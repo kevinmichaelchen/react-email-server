@@ -22,6 +22,7 @@
     "@bufbuild/protobuf": "^1.2.1",
     "@bufbuild/protoc-gen-connect-es": "^0.10.1",
     "@bufbuild/protoc-gen-es": "^1.2.1",
+    "@fastify/env": "^4.2.0",
     "@react-email/button": "0.0.9",
     "@react-email/components": "^0.0.7",
     "@react-email/html": "0.0.4",
@@ -29,6 +30,7 @@
     "fastify": "^4.18.0",
     "react": "^18.2.0",
     "react-email": "^1.9.4",
+    "resend": "^0.15.3",
     "tsx": "^3.12.7"
   },
   "devDependencies": {
