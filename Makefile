@@ -14,7 +14,7 @@ gallery:
 ## generate : Generate protobufs
 .PHONY: generate
 generate:
-	npx buf generate proto
+	buf push
 
 ## install  : Installs NPM dependencies
 .PHONY: install

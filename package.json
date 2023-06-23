@@ -16,6 +16,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@buf/kevinmichaelchen_react-email-server.bufbuild_connect-es": "^0.10.1-20230623191629-0ff054a777c7.1",
+    "@buf/kevinmichaelchen_react-email-server.bufbuild_es": "^1.2.1-20230623191629-0ff054a777c7.1",
     "@bufbuild/buf": "^1.21.0-1",
     "@bufbuild/connect": "^0.10.1",
     "@bufbuild/connect-fastify": "^0.10.1",

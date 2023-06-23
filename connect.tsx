@@ -1,17 +1,17 @@
 import * as React from "react";
 import { ConnectRouter } from "@bufbuild/connect";
-import { EmailService } from "./gen/api_connect";
-import {
-  EmailOptions,
-  SendReceiptEmailRequest,
-  SendReviewEmailRequest,
-  SendWelcomeEmailRequest,
-} from "./gen/api_pb";
 import { Resend } from "resend";
 import { render } from "@react-email/render";
 import StripeWelcomeEmail from "./emails/stripe-welcome";
 import AirbnbReview from "./emails/airbnb-review";
 import AppleReceipt from "./emails/apple-receipt";
+import { EmailService } from "@buf/kevinmichaelchen_react-email-server.bufbuild_connect-es/proto/api_connect";
+import {
+  EmailOptions,
+  SendReceiptEmailRequest,
+  SendReviewEmailRequest,
+  SendWelcomeEmailRequest,
+} from "@buf/kevinmichaelchen_react-email-server.bufbuild_es/proto/api_pb";
 
 export default (apiKey: string) => (router: ConnectRouter) => {
   const resend = new Resend(apiKey);
