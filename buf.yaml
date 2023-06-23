@@ -1,0 +1,8 @@
+version: v1
+name: buf.build/kevinmichaelchen/react-email-server
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT
