@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreateWelcomeEmailRequest, CreateWelcomeEmailResponse, SendReviewEmailRequest, SendReviewEmailResponse, SendWelcomeEmailRequest, SendWelcomeEmailResponse } from "./api_pb.js";
+import { CreateWelcomeEmailRequest, CreateWelcomeEmailResponse, SendReceiptEmailRequest, SendReceiptEmailResponse, SendReviewEmailRequest, SendReviewEmailResponse, SendWelcomeEmailRequest, SendWelcomeEmailResponse } from "./api_pb.js";
 import { MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -41,6 +41,15 @@ export const EmailService = {
       name: "SendReviewEmail",
       I: SendReviewEmailRequest,
       O: SendReviewEmailResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * @generated from rpc buf.connect.demo.eliza.v1.EmailService.SendReceiptEmail
+     */
+    sendReceiptEmail: {
+      name: "SendReceiptEmail",
+      I: SendReceiptEmailRequest,
+      O: SendReceiptEmailResponse,
       kind: MethodKind.Unary,
     },
   }

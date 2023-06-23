@@ -178,6 +178,34 @@ EOF
 http http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/SendReviewEmail
 ```
 
+#### Send an Apple Receipt email
+
+```shell
+(
+cat << EOF
+{
+  "options": {
+    "from": "me@kchen.io",
+    "to": ["kevinmichaelchen@gmail.com"],
+    "subject": "Welcome to the Platform",
+    "tags": [
+      {
+        "name": "email_name",
+        "value": "welcome_email"
+      },
+      {
+        "name": "user_id",
+        "value": "123"
+      }
+    ]
+  },
+  "args": {}
+}
+EOF
+) |
+http http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/SendReceiptEmail
+```
+
 [buf-url]: https://buf.build/
 [connect-url]: https://connect.build/
 [connect-node-url]: https://connect.build/docs/node/getting-started/

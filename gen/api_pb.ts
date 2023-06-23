@@ -469,3 +469,108 @@ export class SendReviewEmailResponse extends Message<SendReviewEmailResponse> {
   }
 }
 
+/**
+ * @generated from message buf.connect.demo.eliza.v1.ReceiptEmail
+ */
+export class ReceiptEmail extends Message<ReceiptEmail> {
+  constructor(data?: PartialMessage<ReceiptEmail>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "buf.connect.demo.eliza.v1.ReceiptEmail";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ReceiptEmail {
+    return new ReceiptEmail().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ReceiptEmail {
+    return new ReceiptEmail().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ReceiptEmail {
+    return new ReceiptEmail().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: ReceiptEmail | PlainMessage<ReceiptEmail> | undefined, b: ReceiptEmail | PlainMessage<ReceiptEmail> | undefined): boolean {
+    return proto3.util.equals(ReceiptEmail, a, b);
+  }
+}
+
+/**
+ * @generated from message buf.connect.demo.eliza.v1.SendReceiptEmailRequest
+ */
+export class SendReceiptEmailRequest extends Message<SendReceiptEmailRequest> {
+  /**
+   * @generated from field: buf.connect.demo.eliza.v1.EmailOptions options = 1;
+   */
+  options?: EmailOptions;
+
+  /**
+   * @generated from field: buf.connect.demo.eliza.v1.ReceiptEmail args = 2;
+   */
+  args?: ReceiptEmail;
+
+  constructor(data?: PartialMessage<SendReceiptEmailRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "buf.connect.demo.eliza.v1.SendReceiptEmailRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "options", kind: "message", T: EmailOptions },
+    { no: 2, name: "args", kind: "message", T: ReceiptEmail },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SendReceiptEmailRequest {
+    return new SendReceiptEmailRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SendReceiptEmailRequest {
+    return new SendReceiptEmailRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SendReceiptEmailRequest {
+    return new SendReceiptEmailRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: SendReceiptEmailRequest | PlainMessage<SendReceiptEmailRequest> | undefined, b: SendReceiptEmailRequest | PlainMessage<SendReceiptEmailRequest> | undefined): boolean {
+    return proto3.util.equals(SendReceiptEmailRequest, a, b);
+  }
+}
+
+/**
+ * @generated from message buf.connect.demo.eliza.v1.SendReceiptEmailResponse
+ */
+export class SendReceiptEmailResponse extends Message<SendReceiptEmailResponse> {
+  constructor(data?: PartialMessage<SendReceiptEmailResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "buf.connect.demo.eliza.v1.SendReceiptEmailResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SendReceiptEmailResponse {
+    return new SendReceiptEmailResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SendReceiptEmailResponse {
+    return new SendReceiptEmailResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SendReceiptEmailResponse {
+    return new SendReceiptEmailResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: SendReceiptEmailResponse | PlainMessage<SendReceiptEmailResponse> | undefined, b: SendReceiptEmailResponse | PlainMessage<SendReceiptEmailResponse> | undefined): boolean {
+    return proto3.util.equals(SendReceiptEmailResponse, a, b);
+  }
+}
+
