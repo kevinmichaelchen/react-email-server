@@ -17,11 +17,7 @@ const baseUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : '';
 
-interface StripeWelcomeEmailProps {
-  name?: string;
-}
-
-export const StripeWelcomeEmail = ({name = 'John Snow'}: StripeWelcomeEmailProps) => (
+export const StripeWelcomeEmail = () => (
   <Html>
     <Head />
     <Preview>You're now ready to make live transactions with Stripe!</Preview>
@@ -35,9 +31,6 @@ export const StripeWelcomeEmail = ({name = 'John Snow'}: StripeWelcomeEmailProps
             alt="Stripe"
           />
           <Hr style={hr} />
-          <Text style={paragraph}>
-            Hello, {name},
-          </Text>
           <Text style={paragraph}>
             Thanks for submitting your account information. You're now ready to
             make live transactions with Stripe!

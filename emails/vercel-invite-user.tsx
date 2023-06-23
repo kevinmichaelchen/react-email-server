@@ -1,8 +1,8 @@
 import {
   Body,
   Button,
-  Column,
   Container,
+  Column,
   Head,
   Heading,
   Hr,
@@ -34,15 +34,15 @@ const baseUrl = process.env.VERCEL_URL
   : '';
 
 export const VercelInviteUserEmail = ({
-  username = 'zenorocha',
-  userImage = `${baseUrl}/static/vercel-user.png`,
-  invitedByUsername = 'bukinoshita',
-  invitedByEmail = 'bukinoshita@example.com',
-  teamName = 'My Project',
-  teamImage = `${baseUrl}/static/vercel-team.png`,
-  inviteLink = 'https://vercel.com/teams/invite/foo',
-  inviteFromIp = '204.13.186.218',
-  inviteFromLocation = 'São Paulo, Brazil',
+  username,
+  userImage,
+  invitedByUsername,
+  invitedByEmail,
+  teamName,
+  teamImage,
+  inviteLink,
+  inviteFromIp,
+  inviteFromLocation,
 }: VercelInviteUserEmailProps) => {
   const previewText = `Join ${invitedByUsername} on Vercel`;
 
@@ -69,7 +69,7 @@ export const VercelInviteUserEmail = ({
               Hello {username},
             </Text>
             <Text className="text-black text-[14px] leading-[24px]">
-              <strong>bukinoshita</strong> (
+              <strong>{invitedByUsername}</strong> (
               <Link
                 href={`mailto:${invitedByEmail}`}
                 className="text-blue-600 no-underline"
@@ -132,5 +132,17 @@ export const VercelInviteUserEmail = ({
     </Html>
   );
 };
+
+VercelInviteUserEmail.PreviewProps = {
+  username: 'zenorocha',
+  userImage: `${baseUrl}/static/vercel-user.png`,
+  invitedByUsername: 'bukinoshita',
+  invitedByEmail: 'bukinoshita@example.com',
+  teamName: 'My Project',
+  teamImage: `${baseUrl}/static/vercel-team.png`,
+  inviteLink: 'https://vercel.com/teams/invite/foo',
+  inviteFromIp: '204.13.186.218',
+  inviteFromLocation: 'São Paulo, Brazil',
+} as VercelInviteUserEmailProps;
 
 export default VercelInviteUserEmail;
