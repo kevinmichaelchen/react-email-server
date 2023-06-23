@@ -14,21 +14,17 @@ courtesy of the [Buf][buf-url] team.
 
 ### Why is this useful?
 
-React Email™ provides a few advantages and nice features:
-
-> A collection of high-quality, unstyled components for creating beautiful
-> emails using React and TypeScript. It reduces the pain of coding
-> **responsive** emails with dark mode support. It also takes care of
-> **inconsistencies** between Gmail, Outlook, and other email clients for you.
->
-> We believe that email is an extremely important medium for people to
-> communicate. However, we need to **stop developing emails like 2010**, and
-> rethink how email can be done in 2022 and beyond. Email development needs a
-> revamp. A renovation. **Modernized** for the way we build web apps today.
+React Email™ provides a few advantages that can be summarized by their call,
+"**Stop developing emails like 2010**":
 
 - Devs feel at home with React.
-- We get to bring our own styling (e.g., [Tailwind][resend-tailwind-url]).
-- We get a nice platform to view and manage all our emails for free.
+- We get to bring our own responsive styling (e.g.,
+  [Tailwind][resend-tailwind-url]).
+- We get a nice [gallery][react-email-demo-url] to view and manage all our
+  emails for free (kind of like what [Storybook][storybook-url] did for UI
+  development).
+- Client inconsistencies (across Gmail, Outlook, and others) are resolved for
+  us.
 
 <p align="center">
 <img width="400" alt="Screenshot of React Email UI" src="https://github.com/kevinmichaelchen/react-email-server/assets/5129994/fb5067ed-d4a8-4ae5-9b41-9bbcf75c2583">
@@ -36,18 +32,20 @@ React Email™ provides a few advantages and nice features:
 
 ### How does this project fit into your architecture?
 
-Typically, platforms send emails as a reaction to some _event_, such as a new
-user signing up.
+1. An event occurs in your platform (e.g., a new user signed up).
+1. Your platform calls this service asking ...
+   1. ... for rendered HTML.
+   1. ... for an email to be sent.
 
-This service is simply an email rendering API. If you wanted to, you could
-easily augment functionality with email sending or a request to a transactional
-email service, such as Resend.
+You can configure email sending capabilities is this service or in this
+service's caller — it's up to you.
+
+At its most barebones, this service is merely an email rendering API. It's using
+Resend to send emails, but you could rip that out or swap it to some other email
+SaaS service. Up to you.
 
 My imagined architecture is that some existing workflow in your platform that's
 already detecting an _event_ can take two additional steps:
-
-1. Make an HTTP / gRPC request **_to this service_** to render an email.
-2. Call the Resend API to send the email.
 
 <p align="center">
 <img width="400" alt="Screenshot of Potential Architecture" src="https://github.com/kevinmichaelchen/react-email-server/assets/5129994/6d882ea1-e34f-4d2c-9367-ca1d50819fbb">
@@ -214,6 +212,7 @@ http http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/SendReceiptEma
 [react-url]: https://react.dev/
 [react-email-integrations-url]: https://react.email/docs/integrations/overview
 [react-email-url]: https://react.email/
+[react-email-demo-url]: https://demo.react.email/preview/airbnb-review
 [resend-blog-domain-verification]:
   https://resend.com/blog/new-domain-verification-experience
 [resend-blog-open-click-tracking]:
@@ -227,3 +226,4 @@ http http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/SendReceiptEma
 [resend-tailwind-url]: https://resend.com/blog/tailwind-with-react-email
 [resend-url]: https://resend.com
 [resend-pricing-url]: https://resend.com/pricing
+[storybook-url]: https://storybook.js.org/
