@@ -35,6 +35,9 @@ export default (apiKey: string) => (router: ConnectRouter) => {
           from: req.options?.from ?? 'onboarding@resend.dev',
           to: req.options?.to ?? 'delivered@resend.dev',
           subject: req.options?.subject ?? 'Hello World',
+          tags: req.options?.tags ?? [],
+          cc: req.options?.cc ?? undefined,
+          bcc: req.options?.bcc ?? undefined,
           html,
         });
 

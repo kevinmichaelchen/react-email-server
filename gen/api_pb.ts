@@ -163,13 +163,56 @@ export class CreateWelcomeEmailResponse extends Message<CreateWelcomeEmailRespon
 }
 
 /**
+ * @generated from message buf.connect.demo.eliza.v1.Tag
+ */
+export class Tag extends Message<Tag> {
+  /**
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  /**
+   * @generated from field: string value = 2;
+   */
+  value = "";
+
+  constructor(data?: PartialMessage<Tag>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "buf.connect.demo.eliza.v1.Tag";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "value", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Tag {
+    return new Tag().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Tag {
+    return new Tag().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Tag {
+    return new Tag().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: Tag | PlainMessage<Tag> | undefined, b: Tag | PlainMessage<Tag> | undefined): boolean {
+    return proto3.util.equals(Tag, a, b);
+  }
+}
+
+/**
  * @generated from message buf.connect.demo.eliza.v1.EmailOptions
  */
 export class EmailOptions extends Message<EmailOptions> {
   /**
-   * @generated from field: string to = 1;
+   * @generated from field: repeated string to = 1;
    */
-  to = "";
+  to: string[] = [];
 
   /**
    * @generated from field: string subject = 2;
@@ -181,6 +224,21 @@ export class EmailOptions extends Message<EmailOptions> {
    */
   from = "";
 
+  /**
+   * @generated from field: repeated string cc = 4;
+   */
+  cc: string[] = [];
+
+  /**
+   * @generated from field: repeated string bcc = 5;
+   */
+  bcc: string[] = [];
+
+  /**
+   * @generated from field: repeated buf.connect.demo.eliza.v1.Tag tags = 6;
+   */
+  tags: Tag[] = [];
+
   constructor(data?: PartialMessage<EmailOptions>) {
     super();
     proto3.util.initPartial(data, this);
@@ -189,9 +247,12 @@ export class EmailOptions extends Message<EmailOptions> {
   static readonly runtime: typeof proto3 = proto3;
   static readonly typeName = "buf.connect.demo.eliza.v1.EmailOptions";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "to", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 1, name: "to", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
     { no: 2, name: "subject", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "from", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "cc", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 5, name: "bcc", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 6, name: "tags", kind: "message", T: Tag, repeated: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EmailOptions {

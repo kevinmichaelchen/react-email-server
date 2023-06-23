@@ -25,10 +25,18 @@ message CreateWelcomeEmailResponse {
   string html = 1;
 }
 
+message Tag {
+  string name = 1;
+  string value = 2;
+}
+
 message EmailOptions {
-  string to = 1;
+  repeated string to = 1;
   string subject = 2;
   string from = 3;
+  repeated string cc = 4;
+  repeated string bcc = 5;
+  repeated Tag tags = 6;
 }
 
 message SendWelcomeEmailRequest {
