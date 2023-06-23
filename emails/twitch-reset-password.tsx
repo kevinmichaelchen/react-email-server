@@ -23,9 +23,9 @@ const baseUrl = process.env.VERCEL_URL
   : '';
 
 export const TwitchResetPasswordEmail = ({
-  username,
-  updatedDate,
-}: TwitchResetPasswordEmailProps) => {
+                                           username = 'zenorocha',
+                                           updatedDate = new Date('June 23, 2022 4:06:00 pm UTC'),
+                                         }: TwitchResetPasswordEmailProps) => {
   const formattedDate = new Intl.DateTimeFormat('en', {
     dateStyle: 'medium',
     timeStyle: 'medium',
@@ -55,8 +55,9 @@ export const TwitchResetPasswordEmail = ({
               required.
             </Text>
             <Text style={paragraph}>
-              However if you did NOT perform this password change, please{' '}
+              However if you did NOT perform this password change, please
               <Link href="#" style={link}>
+                {' '}
                 reset your account password
               </Link>{' '}
               immediately.
@@ -64,14 +65,16 @@ export const TwitchResetPasswordEmail = ({
             <Text style={paragraph}>
               Remember to use a password that is both strong and unique to your
               Twitch account. To learn more about how to create a strong and
-              unique password,{' '}
+              unique password,
               <Link href="#" style={link}>
+                {' '}
                 click here.
               </Link>
             </Text>
             <Text style={paragraph}>
-              Still have questions? Please contact{' '}
+              Still have questions? Please contact
               <Link href="#" style={link}>
+                {' '}
                 Twitch Support
               </Link>
             </Text>
@@ -101,11 +104,6 @@ export const TwitchResetPasswordEmail = ({
     </Html>
   );
 };
-
-TwitchResetPasswordEmail.PreviewProps = {
-  username: 'zenorocha',
-  updatedDate: new Date('June 23, 2022 4:06:00 pm UTC'),
-} as TwitchResetPasswordEmailProps;
 
 export default TwitchResetPasswordEmail;
 

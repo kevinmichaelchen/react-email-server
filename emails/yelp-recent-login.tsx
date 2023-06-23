@@ -27,12 +27,12 @@ const baseUrl = process.env.VERCEL_URL
   : '';
 
 export const YelpRecentLoginEmail = ({
-  userFirstName,
-  loginDate,
-  loginDevice,
-  loginLocation,
-  loginIp,
-}: YelpRecentLoginEmailProps) => {
+                                       userFirstName = 'Zeno',
+                                       loginDate = new Date('September 7, 2022, 10:58 am'),
+                                       loginDevice = 'Chrome on Mac OS X',
+                                       loginLocation = 'Upland, California, United States',
+                                       loginIp = '47.149.53.167',
+                                     }: YelpRecentLoginEmailProps) => {
   const formattedDate = new Intl.DateTimeFormat('en', {
     dateStyle: 'long',
     timeStyle: 'short',
@@ -131,14 +131,6 @@ export const YelpRecentLoginEmail = ({
     </Html>
   );
 };
-
-YelpRecentLoginEmail.PreviewProps = {
-  userFirstName: 'Zeno',
-  loginDate: new Date('September 7, 2022, 10:58 am'),
-  loginDevice: 'Chrome on Mac OS X',
-  loginLocation: 'Upland, California, United States',
-  loginIp: '47.149.53.167',
-} as YelpRecentLoginEmailProps;
 
 export default YelpRecentLoginEmail;
 

@@ -22,8 +22,8 @@ const baseUrl = process.env.VERCEL_URL
   : '';
 
 export const RaycastMagicLinkEmail = ({
-  magicLink,
-}: RaycastMagicLinkEmailProps) => (
+                                        magicLink = 'https://raycast.com',
+                                      }: RaycastMagicLinkEmailProps) => (
   <Html>
     <Head />
     <Preview>Log in with this magic link.</Preview>
@@ -69,10 +69,6 @@ export const RaycastMagicLinkEmail = ({
     </Body>
   </Html>
 );
-
-RaycastMagicLinkEmail.PreviewProps = {
-  magicLink: 'https://raycast.com',
-} as RaycastMagicLinkEmailProps;
 
 export default RaycastMagicLinkEmail;
 

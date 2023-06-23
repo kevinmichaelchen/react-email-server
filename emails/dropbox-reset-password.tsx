@@ -22,9 +22,9 @@ const baseUrl = process.env.VERCEL_URL
   : '';
 
 export const DropboxResetPasswordEmail = ({
-  userFirstname,
-  resetPasswordLink,
-}: DropboxResetPasswordEmailProps) => {
+                                            userFirstname = 'Zeno',
+                                            resetPasswordLink = 'https://dropbox.com',
+                                          }: DropboxResetPasswordEmailProps) => {
   return (
     <Html>
       <Head />
@@ -64,11 +64,6 @@ export const DropboxResetPasswordEmail = ({
     </Html>
   );
 };
-
-DropboxResetPasswordEmail.PreviewProps = {
-  userFirstname: 'Zeno',
-  resetPasswordLink: 'https://dropbox.com',
-} as DropboxResetPasswordEmailProps;
 
 export default DropboxResetPasswordEmail;
 

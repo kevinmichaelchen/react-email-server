@@ -44,8 +44,8 @@ const PropDefaults: StackOverflowTipsEmailProps = {
 };
 
 export const StackOverflowTipsEmail = ({
-  tips = [],
-}: StackOverflowTipsEmailProps) => (
+                                         tips = PropDefaults.tips,
+                                       }: StackOverflowTipsEmailProps) => (
   <Html>
     <Head />
     <Preview>Stack overflow tips for searching</Preview>
@@ -89,7 +89,7 @@ export const StackOverflowTipsEmail = ({
             Here are a few simple search tips to get you started:
           </Text>
           <ul>
-            {tips.map((tip) => (
+            {tips?.map((tip) => (
               <li key={tip.id}>
                 <Text style={paragraph}>{tip.description}</Text>
               </li>
@@ -147,10 +147,6 @@ export const StackOverflowTipsEmail = ({
     </Body>
   </Html>
 );
-
-StackOverflowTipsEmail.PreviewProps = {
-  tips: PropDefaults.tips,
-} as StackOverflowTipsEmailProps;
 
 export default StackOverflowTipsEmail;
 

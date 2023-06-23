@@ -23,8 +23,8 @@ const baseUrl = process.env.VERCEL_URL
   : '';
 
 export const LinearLoginCodeEmail = ({
-  validationCode,
-}: LinearLoginCodeEmailProps) => (
+                                       validationCode = 'tt226-5398x',
+                                     }: LinearLoginCodeEmailProps) => (
   <Html>
     <Head />
     <Preview>Your login code for Linear</Preview>
@@ -56,10 +56,6 @@ export const LinearLoginCodeEmail = ({
     </Body>
   </Html>
 );
-
-LinearLoginCodeEmail.PreviewProps = {
-  validationCode: 'tt226-5398x',
-} as LinearLoginCodeEmailProps;
 
 export default LinearLoginCodeEmail;
 

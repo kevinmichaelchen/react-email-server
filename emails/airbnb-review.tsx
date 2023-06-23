@@ -25,10 +25,13 @@ const baseUrl = process.env.VERCEL_URL
   : '';
 
 export const AirbnbReviewEmail = ({
-  authorName,
-  authorImage,
-  reviewText,
-}: AirbnbReviewEmailProps) => {
+                                    authorName = 'Alex',
+                                    authorImage = `${baseUrl}/static/airbnb-review-user.jpg`,
+                                    reviewText = `“Zeno was a great guest! Easy communication, the apartment was left
+    in great condition, very polite, and respectful of all house rules.
+    He’s welcome back anytime and would easily recommend him to any
+    host!”`,
+                                  }: AirbnbReviewEmailProps) => {
   const previewText = `Read ${authorName}'s review`;
 
   return (
@@ -116,15 +119,6 @@ export const AirbnbReviewEmail = ({
     </Html>
   );
 };
-
-AirbnbReviewEmail.PreviewProps = {
-  authorName: 'Alex',
-  authorImage: `${baseUrl}/static/airbnb-review-user.jpg`,
-  reviewText: `“Zeno was a great guest! Easy communication, the apartment was left
-    in great condition, very polite, and respectful of all house rules.
-    He’s welcome back anytime and would easily recommend him to any
-    host!”`,
-} as AirbnbReviewEmailProps;
 
 export default AirbnbReviewEmail;
 
