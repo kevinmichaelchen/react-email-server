@@ -57,7 +57,20 @@ already detecting an _event_ can take two additional steps:
 
 React Email provides multiple [examples][react-email-integrations-url] of
 integrating with 3rd-party email services. You can use any number of services
-for transactional email: Resend, Nodemailer,
+for transactional email:
+
+- Resend
+- Nodemailer
+- SendGrid
+- Postmark
+- AWS SES
+- MailerSend
+- Plunk
+- Moosend
+- Mailjet
+- Mandrill
+- Elastic Email
+- SparkPost
 
 #### Why use Resend?
 
