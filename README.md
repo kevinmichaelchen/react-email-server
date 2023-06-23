@@ -108,10 +108,21 @@ open output.html
 ### Sending an email
 
 ```shell
-curl \
-  --header 'Content-Type: application/json' \
-  --data '{"options": {"to": "kevinmichaelchen@gmail.com", "subject": "Welcome to the Platform"}, "args": {"name": "Kevin"}}' \
-   http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/SendWelcomeEmail
+(
+cat << EOF
+{
+  "options": {
+    "from": "me@kchen.io",
+    "to": "kevinmichaelchen@gmail.com",
+    "subject": "Welcome to the Platform"
+  },
+  "args": {
+    "name": "Kevin"
+  }
+}
+EOF
+) | 
+http http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/SendWelcomeEmail
 ```
 
 [buf-url]: https://buf.build/

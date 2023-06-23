@@ -32,7 +32,7 @@ export default (apiKey: string) => (router: ConnectRouter) => {
 
       try {
         const data = await resend.emails.send({
-          from: 'onboarding@resend.dev',
+          from: req.options?.from ?? 'onboarding@resend.dev',
           to: req.options?.to ?? 'delivered@resend.dev',
           subject: req.options?.subject ?? 'Hello World',
           html,

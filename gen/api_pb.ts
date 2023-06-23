@@ -176,6 +176,11 @@ export class EmailOptions extends Message<EmailOptions> {
    */
   subject = "";
 
+  /**
+   * @generated from field: string from = 3;
+   */
+  from = "";
+
   constructor(data?: PartialMessage<EmailOptions>) {
     super();
     proto3.util.initPartial(data, this);
@@ -186,6 +191,7 @@ export class EmailOptions extends Message<EmailOptions> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "to", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "subject", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "from", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EmailOptions {
