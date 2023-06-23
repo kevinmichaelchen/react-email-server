@@ -8,11 +8,11 @@ them up to the [Buf Schema Registry][buf-schema-registry-url].
 
 > Remote packages is the movement towards this promise. With remote packages,
 > Buf will take your modules and Protobuf plugins, add a little elbow grease,
-> and generate full-serve packages for you to consume just like any third-party
-> library in your native programming language. This means you don't have to
-> worry about Protobuf code generation at all - you can push modules to the BSR
-> and install code stubs generated from those modules using dependency
-> management tools like npm, go, mvn, and gradle.
+> and **generate full-serve packages for you to consume** just like any
+> third-party library in your native programming language. This means **you
+> don't have to worry** about Protobuf code generation at all - you can push
+> modules to the BSR and install **code stubs generated from those modules**
+> using dependency management tools like npm, go, mvn, and gradle.
 
 You can find all SDKs for this server [here][buf-sdks-url].
 
