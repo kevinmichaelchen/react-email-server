@@ -3,8 +3,13 @@ syntax = "proto3";
 package buf.connect.demo.eliza.v1;
 
 service EmailService {
+  // Renders a Welcome email as HTML
   rpc CreateWelcomeEmail(CreateWelcomeEmailRequest) returns (CreateWelcomeEmailResponse) {}
+
+  // Sends a Welcome email to the specified recipients
   rpc SendWelcomeEmail(SendWelcomeEmailRequest) returns (SendWelcomeEmailResponse) {}
+
+  rpc SendReviewEmail(SendReviewEmailRequest) returns (SendReviewEmailResponse) {}
 }
 
 message RenderOptions {
@@ -45,4 +50,17 @@ message SendWelcomeEmailRequest {
 }
 
 message SendWelcomeEmailResponse {
+  EmailOptions options = 1;
 }
+
+message ReviewEmail {
+  string author_name = 1;
+  string review_text = 2;
+}
+
+message SendReviewEmailRequest {
+  EmailOptions options = 1;
+  ReviewEmail args = 2;
+}
+
+message SendReviewEmailResponse {}

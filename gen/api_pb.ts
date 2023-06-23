@@ -319,6 +319,11 @@ export class SendWelcomeEmailRequest extends Message<SendWelcomeEmailRequest> {
  * @generated from message buf.connect.demo.eliza.v1.SendWelcomeEmailResponse
  */
 export class SendWelcomeEmailResponse extends Message<SendWelcomeEmailResponse> {
+  /**
+   * @generated from field: buf.connect.demo.eliza.v1.EmailOptions options = 1;
+   */
+  options?: EmailOptions;
+
   constructor(data?: PartialMessage<SendWelcomeEmailResponse>) {
     super();
     proto3.util.initPartial(data, this);
@@ -327,6 +332,7 @@ export class SendWelcomeEmailResponse extends Message<SendWelcomeEmailResponse> 
   static readonly runtime: typeof proto3 = proto3;
   static readonly typeName = "buf.connect.demo.eliza.v1.SendWelcomeEmailResponse";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "options", kind: "message", T: EmailOptions },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SendWelcomeEmailResponse {
@@ -343,6 +349,123 @@ export class SendWelcomeEmailResponse extends Message<SendWelcomeEmailResponse> 
 
   static equals(a: SendWelcomeEmailResponse | PlainMessage<SendWelcomeEmailResponse> | undefined, b: SendWelcomeEmailResponse | PlainMessage<SendWelcomeEmailResponse> | undefined): boolean {
     return proto3.util.equals(SendWelcomeEmailResponse, a, b);
+  }
+}
+
+/**
+ * @generated from message buf.connect.demo.eliza.v1.ReviewEmail
+ */
+export class ReviewEmail extends Message<ReviewEmail> {
+  /**
+   * @generated from field: string author_name = 1;
+   */
+  authorName = "";
+
+  /**
+   * @generated from field: string review_text = 2;
+   */
+  reviewText = "";
+
+  constructor(data?: PartialMessage<ReviewEmail>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "buf.connect.demo.eliza.v1.ReviewEmail";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "author_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "review_text", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ReviewEmail {
+    return new ReviewEmail().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ReviewEmail {
+    return new ReviewEmail().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ReviewEmail {
+    return new ReviewEmail().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: ReviewEmail | PlainMessage<ReviewEmail> | undefined, b: ReviewEmail | PlainMessage<ReviewEmail> | undefined): boolean {
+    return proto3.util.equals(ReviewEmail, a, b);
+  }
+}
+
+/**
+ * @generated from message buf.connect.demo.eliza.v1.SendReviewEmailRequest
+ */
+export class SendReviewEmailRequest extends Message<SendReviewEmailRequest> {
+  /**
+   * @generated from field: buf.connect.demo.eliza.v1.EmailOptions options = 1;
+   */
+  options?: EmailOptions;
+
+  /**
+   * @generated from field: buf.connect.demo.eliza.v1.ReviewEmail args = 2;
+   */
+  args?: ReviewEmail;
+
+  constructor(data?: PartialMessage<SendReviewEmailRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "buf.connect.demo.eliza.v1.SendReviewEmailRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "options", kind: "message", T: EmailOptions },
+    { no: 2, name: "args", kind: "message", T: ReviewEmail },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SendReviewEmailRequest {
+    return new SendReviewEmailRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SendReviewEmailRequest {
+    return new SendReviewEmailRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SendReviewEmailRequest {
+    return new SendReviewEmailRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: SendReviewEmailRequest | PlainMessage<SendReviewEmailRequest> | undefined, b: SendReviewEmailRequest | PlainMessage<SendReviewEmailRequest> | undefined): boolean {
+    return proto3.util.equals(SendReviewEmailRequest, a, b);
+  }
+}
+
+/**
+ * @generated from message buf.connect.demo.eliza.v1.SendReviewEmailResponse
+ */
+export class SendReviewEmailResponse extends Message<SendReviewEmailResponse> {
+  constructor(data?: PartialMessage<SendReviewEmailResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "buf.connect.demo.eliza.v1.SendReviewEmailResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SendReviewEmailResponse {
+    return new SendReviewEmailResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SendReviewEmailResponse {
+    return new SendReviewEmailResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SendReviewEmailResponse {
+    return new SendReviewEmailResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: SendReviewEmailResponse | PlainMessage<SendReviewEmailResponse> | undefined, b: SendReviewEmailResponse | PlainMessage<SendReviewEmailResponse> | undefined): boolean {
+    return proto3.util.equals(SendReviewEmailResponse, a, b);
   }
 }
 

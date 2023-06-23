@@ -104,6 +104,8 @@ the NodeJS server.
 If you don't have your own domain, omit the `.options.from` field from the
 request.
 
+#### Send a Stripe Welcome email
+
 ```shell
 (
 cat << EOF
@@ -130,6 +132,37 @@ cat << EOF
 EOF
 ) |
 http http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/SendWelcomeEmail
+```
+
+#### Send an AirBnB Review email
+
+```shell
+(
+cat << EOF
+{
+  "options": {
+    "from": "me@kchen.io",
+    "to": ["kevinmichaelchen@gmail.com"],
+    "subject": "Welcome to the Platform",
+    "tags": [
+      {
+        "name": "email_name",
+        "value": "welcome_email"
+      },
+      {
+        "name": "user_id",
+        "value": "123"
+      }
+    ]
+  },
+  "args": {
+    "author_name": "Kevin",
+    "review_text": "Apartment was kind of dirty, not gonna lie"
+  }
+}
+EOF
+) |
+http http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/SendReviewEmail
 ```
 
 [buf-url]: https://buf.build/
