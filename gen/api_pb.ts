@@ -92,9 +92,9 @@ export class CreateWelcomeEmailRequest extends Message<CreateWelcomeEmailRequest
   options?: RenderOptions;
 
   /**
-   * @generated from field: buf.connect.demo.eliza.v1.WelcomeEmail email_args = 2;
+   * @generated from field: buf.connect.demo.eliza.v1.WelcomeEmail args = 2;
    */
-  emailArgs?: WelcomeEmail;
+  args?: WelcomeEmail;
 
   constructor(data?: PartialMessage<CreateWelcomeEmailRequest>) {
     super();
@@ -105,7 +105,7 @@ export class CreateWelcomeEmailRequest extends Message<CreateWelcomeEmailRequest
   static readonly typeName = "buf.connect.demo.eliza.v1.CreateWelcomeEmailRequest";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "options", kind: "message", T: RenderOptions },
-    { no: 2, name: "email_args", kind: "message", T: WelcomeEmail },
+    { no: 2, name: "args", kind: "message", T: WelcomeEmail },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateWelcomeEmailRequest {
@@ -215,9 +215,9 @@ export class SendWelcomeEmailRequest extends Message<SendWelcomeEmailRequest> {
   options?: EmailOptions;
 
   /**
-   * @generated from field: buf.connect.demo.eliza.v1.WelcomeEmail email_args = 2;
+   * @generated from field: buf.connect.demo.eliza.v1.WelcomeEmail args = 2;
    */
-  emailArgs?: WelcomeEmail;
+  args?: WelcomeEmail;
 
   constructor(data?: PartialMessage<SendWelcomeEmailRequest>) {
     super();
@@ -228,7 +228,7 @@ export class SendWelcomeEmailRequest extends Message<SendWelcomeEmailRequest> {
   static readonly typeName = "buf.connect.demo.eliza.v1.SendWelcomeEmailRequest";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "options", kind: "message", T: EmailOptions },
-    { no: 2, name: "email_args", kind: "message", T: WelcomeEmail },
+    { no: 2, name: "args", kind: "message", T: WelcomeEmail },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SendWelcomeEmailRequest {

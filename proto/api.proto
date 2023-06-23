@@ -18,7 +18,7 @@ message WelcomeEmail {
 
 message CreateWelcomeEmailRequest {
   RenderOptions options = 1;
-  WelcomeEmail email_args = 2;
+  WelcomeEmail args = 2;
 }
 
 message CreateWelcomeEmailResponse {
@@ -32,7 +32,7 @@ message EmailOptions {
 
 message SendWelcomeEmailRequest {
   EmailOptions options = 1;
-  WelcomeEmail email_args = 2;
+  WelcomeEmail args = 2;
 }
 
 message SendWelcomeEmailResponse {

@@ -15,7 +15,7 @@ export default (apiKey: string) => (router: ConnectRouter) => {
   router.service(EmailService, {
     // implements rpc CreateWelcomeEmail
     async createWelcomeEmail(req) {
-      const name = req.emailArgs?.name ?? 'John Snow';
+      const name = req.args?.name ?? 'John Snow';
       const html = render(<StripeWelcomeEmail name={name}/>, {
         pretty: req.options?.pretty ?? false,
       });
@@ -25,7 +25,7 @@ export default (apiKey: string) => (router: ConnectRouter) => {
     },
 
     async sendWelcomeEmail(req) {
-      const name = req.emailArgs?.name ?? 'John Snow';
+      const name = req.args?.name ?? 'John Snow';
       const html = render(<StripeWelcomeEmail name={name}/>, {
         pretty: false,
       });

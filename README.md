@@ -99,7 +99,7 @@ curl \
 ```shell
 curl \
   --header 'Content-Type: application/json' \
-  --data '{"name": "Kevin"}' \
+  --data '{"options": {"pretty": true}, "args": {"name": "Kevin"}}' \
    http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/CreateWelcomeEmail | jq -r '.html' > output.html
 
 open output.html
@@ -110,7 +110,7 @@ open output.html
 ```shell
 curl \
   --header 'Content-Type: application/json' \
-  --data '{"options": {"to": "kevinmichaelchen@gmail.com", "subject": "Welcome to the Platform"}, "email_args": {"name": "Kevin"}}' \
+  --data '{"options": {"to": "kevinmichaelchen@gmail.com", "subject": "Welcome to the Platform"}, "args": {"name": "Kevin"}}' \
    http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/SendWelcomeEmail
 ```
 
