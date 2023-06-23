@@ -107,14 +107,28 @@ open output.html
 
 ### Sending an email
 
+For email sending capabilities, you'll need to sign up with Resend, configure 
+your own domain, acquire an API key, create a new `.env` file (in the model of
+`.env.example`), and finally, restart the NodeJS server.
+
 ```shell
 (
 cat << EOF
 {
   "options": {
     "from": "me@kchen.io",
-    "to": "kevinmichaelchen@gmail.com",
-    "subject": "Welcome to the Platform"
+    "to": ["kevinmichaelchen@gmail.com"],
+    "subject": "Welcome to the Platform",
+    "tags": [
+      {
+        "name": "email_name",
+        "value": "welcome_email"
+      },
+      {
+        "name": "user_id",
+        "value": "123"
+      }
+    ]
   },
   "args": {
     "name": "Kevin"
