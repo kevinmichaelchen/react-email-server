@@ -6,4 +6,7 @@ node_modules
 # React Email
 .react-email
 
+# Sensitive
+.env
+
 output.html

@@ -56,7 +56,8 @@ already detecting an _event_ can take two additional steps:
 ### How are emails sent?
 
 React Email provides multiple [examples][react-email-integrations-url] of
-integrating with 3rd-party email services.
+integrating with 3rd-party email services. You can use any number of services
+for transactional email: Resend, Nodemailer,
 
 #### Why use Resend?
 
@@ -102,6 +103,15 @@ curl \
    http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/CreateWelcomeEmail | jq -r '.html' > output.html
 
 open output.html
+```
+
+### Sending an email
+
+```shell
+curl \
+  --header 'Content-Type: application/json' \
+  --data '{"options": {"to": "kevinmichaelchen@gmail.com", "subject": "Welcome to the Platform"}, "email_args": {"name": "Kevin"}}' \
+   http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/SendWelcomeEmail
 ```
 
 [buf-url]: https://buf.build/

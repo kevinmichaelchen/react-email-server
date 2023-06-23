@@ -4,6 +4,7 @@ package buf.connect.demo.eliza.v1;
 
 service EmailService {
   rpc CreateWelcomeEmail(CreateWelcomeEmailRequest) returns (CreateWelcomeEmailResponse) {}
+  rpc SendWelcomeEmail(SendWelcomeEmailRequest) returns (SendWelcomeEmailResponse) {}
 }
 
 message RenderOptions {
@@ -11,11 +12,28 @@ message RenderOptions {
   bool pretty = 1;
 }
 
+message WelcomeEmail {
+  string name = 1;
+}
+
 message CreateWelcomeEmailRequest {
   RenderOptions options = 1;
-  string name = 2;
+  WelcomeEmail email_args = 2;
 }
 
 message CreateWelcomeEmailResponse {
   string html = 1;
+}
+
+message EmailOptions {
+  string to = 1;
+  string subject = 2;
+}
+
+message SendWelcomeEmailRequest {
+  EmailOptions options = 1;
+  WelcomeEmail email_args = 2;
+}
+
+message SendWelcomeEmailResponse {
 }
