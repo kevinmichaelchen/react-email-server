@@ -1,0 +1,12 @@
+node_modules
+
+# JetBrains
+.idea
+
+# React Email
+.react-email
+
+# Sensitive
+.env
+
+output.html

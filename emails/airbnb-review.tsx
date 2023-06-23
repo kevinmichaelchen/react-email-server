@@ -11,8 +11,8 @@ import {
   Row,
   Section,
   Text,
-} from '@react-email/components';
-import * as React from 'react';
+} from "@react-email/components";
+import * as React from "react";
 
 interface AirbnbReviewEmailProps {
   authorName?: string;
@@ -22,16 +22,16 @@ interface AirbnbReviewEmailProps {
 
 const baseUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : '';
+  : "";
 
 export const AirbnbReviewEmail = ({
-                                    authorName = 'Alex',
-                                    authorImage = `${baseUrl}/static/airbnb-review-user.jpg`,
-                                    reviewText = `“Zeno was a great guest! Easy communication, the apartment was left
+  authorName = "Alex",
+  authorImage = `${baseUrl}/static/airbnb-review-user.jpg`,
+  reviewText = `“Zeno was a great guest! Easy communication, the apartment was left
     in great condition, very polite, and respectful of all house rules.
     He’s welcome back anytime and would easily recommend him to any
     host!”`,
-                                  }: AirbnbReviewEmailProps) => {
+}: AirbnbReviewEmailProps) => {
   const previewText = `Read ${authorName}'s review`;
 
   return (
@@ -59,7 +59,7 @@ export const AirbnbReviewEmail = ({
                 style={userImage}
               />
             </Section>
-            <Section style={{ paddingBottom: '20px' }}>
+            <Section style={{ paddingBottom: "20px" }}>
               <Row>
                 <Text style={heading}>Here's what {authorName} wrote</Text>
                 <Text style={review}>{reviewText}</Text>
@@ -67,7 +67,7 @@ export const AirbnbReviewEmail = ({
                   Now that the review period is over, we’ve posted {authorName}
                   ’s review to your Airbnb profile.
                 </Text>
-                <Text style={{ ...paragraph, paddingBottom: '16px' }}>
+                <Text style={{ ...paragraph, paddingBottom: "16px" }}>
                   While it’s too late to write a review of your own, you can
                   send your feedback to {authorName} using your Airbnb message
                   thread.
@@ -83,7 +83,7 @@ export const AirbnbReviewEmail = ({
 
             <Section>
               <Row>
-                <Text style={{ ...paragraph, fontWeight: '700' }}>
+                <Text style={{ ...paragraph, fontWeight: "700" }}>
                   Common questions
                 </Text>
                 <Text>
@@ -123,73 +123,73 @@ export const AirbnbReviewEmail = ({
 export default AirbnbReviewEmail;
 
 const main = {
-  backgroundColor: '#ffffff',
+  backgroundColor: "#ffffff",
   fontFamily:
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
 };
 
 const container = {
-  margin: '0 auto',
-  padding: '20px 0 48px',
-  width: '580px',
+  margin: "0 auto",
+  padding: "20px 0 48px",
+  width: "580px",
 };
 
 const userImage = {
-  margin: '0 auto',
-  marginBottom: '16px',
-  borderRadius: '50%',
+  margin: "0 auto",
+  marginBottom: "16px",
+  borderRadius: "50%",
 };
 
 const heading = {
-  fontSize: '32px',
-  lineHeight: '1.3',
-  fontWeight: '700',
-  color: '#484848',
+  fontSize: "32px",
+  lineHeight: "1.3",
+  fontWeight: "700",
+  color: "#484848",
 };
 
 const paragraph = {
-  fontSize: '18px',
-  lineHeight: '1.4',
-  color: '#484848',
+  fontSize: "18px",
+  lineHeight: "1.4",
+  color: "#484848",
 };
 
 const review = {
   ...paragraph,
-  padding: '24px',
-  backgroundColor: '#f2f3f3',
-  borderRadius: '4px',
+  padding: "24px",
+  backgroundColor: "#f2f3f3",
+  borderRadius: "4px",
 };
 
 const button = {
-  backgroundColor: '#ff5a5f',
-  borderRadius: '3px',
-  color: '#fff',
-  fontSize: '18px',
-  textDecoration: 'none',
-  textAlign: 'center' as const,
-  display: 'block',
-  width: '100%',
+  backgroundColor: "#ff5a5f",
+  borderRadius: "3px",
+  color: "#fff",
+  fontSize: "18px",
+  textDecoration: "none",
+  textAlign: "center" as const,
+  display: "block",
+  width: "100%",
 };
 
 const link = {
   ...paragraph,
-  color: '#ff5a5f',
-  display: 'block',
+  color: "#ff5a5f",
+  display: "block",
 };
 
 const reportLink = {
-  fontSize: '14px',
-  color: '#9ca299',
-  textDecoration: 'underline',
+  fontSize: "14px",
+  color: "#9ca299",
+  textDecoration: "underline",
 };
 
 const hr = {
-  borderColor: '#cccccc',
-  margin: '20px 0',
+  borderColor: "#cccccc",
+  margin: "20px 0",
 };
 
 const footer = {
-  color: '#9ca299',
-  fontSize: '14px',
-  marginBottom: '10px',
+  color: "#9ca299",
+  fontSize: "14px",
+  marginBottom: "10px",
 };
