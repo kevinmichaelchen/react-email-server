@@ -107,9 +107,13 @@ open output.html
 
 ### Sending an email
 
-For email sending capabilities, you'll need to sign up with Resend, configure 
-your own domain, acquire an API key, create a new `.env` file (in the model of
-`.env.example`), and finally, restart the NodeJS server.
+For email sending capabilities, you'll need to sign up with
+[Resend][resend-url], configure your own domain (optional), acquire an API key,
+create a new `.env` file (in the model of `.env.example`), and finally, restart
+the NodeJS server.
+
+If you don't have your own domain, omit the `.options.from` field from the
+request.
 
 ```shell
 (
@@ -135,7 +139,7 @@ cat << EOF
   }
 }
 EOF
-) | 
+) |
 http http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/SendWelcomeEmail
 ```
 
