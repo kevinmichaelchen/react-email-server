@@ -83,17 +83,6 @@ called [Resend][resend-url]. It has a number of nice features:
 make start
 ```
 
-### Execute HTTP Request
-
-Hit the server on port 8080:
-
-```bash
-curl \
-  --header 'Content-Type: application/json' \
-  --data '{"name": "Kevin"}' \
-   http://localhost:8080/buf.connect.demo.eliza.v1.EmailService/CreateWelcomeEmail
-```
-
 ### Viewing the HTML output
 
 ```shell
