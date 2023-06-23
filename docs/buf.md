@@ -29,6 +29,18 @@ npm install \
   @buf/kevinmichaelchen_react-email-server.bufbuild_es@latest
 ```
 
+### Go
+
+```shell
+go get \
+  buf.build/gen/go/kevinmichaelchen/react-email-server/bufbuild/connect-go@latest \
+  buf.build/gen/go/kevinmichaelchen/react-email-server/protocolbuffers/go@latest
+```
+
+### Private hosting
+
+The price of $1-2 per RPC per month.
+
 [buf-url]: https://buf.build/
 [buf-schema-registry-url]: https://buf.build/docs/bsr/remote-packages/overview/
 [buf-sdks-url]:
