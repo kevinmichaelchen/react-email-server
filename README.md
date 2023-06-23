@@ -59,7 +59,7 @@ React Email provides multiple [examples][react-email-integrations-url] of
 integrating with 3rd-party email services. You can use any number of services
 for transactional email:
 
-- Resend
+- [Resend][resend-url]
 - Nodemailer
 - SendGrid
 - Postmark
@@ -74,8 +74,8 @@ for transactional email:
 
 #### Why use Resend?
 
-The maintainers of React Email have built a transactional email SaaS platform
-called [Resend][resend-url]. It has a number of nice features:
+It's built by the same people who maintain React Email, with several nice
+features:
 
 - Affordable ([free][resend-pricing-url] up to 3000 emails per month)
 - Wide language support (lots of [SDKs][resend-docs-go-url])

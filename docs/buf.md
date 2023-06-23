@@ -3,13 +3,16 @@
 ## Buf Schema Registry
 
 We rely on [Buf][buf-url] for protobuf hosting, documentation, and SDK
-management.
+management. All we do as project maintainers is to create protobufs and push
+them up to the [Buf Schema Registry][buf-schema-registry-url].
 
-All we do as project maintainers is to create protobufs and push them up to the
-[Buf Schema Registry][buf-schema-registry-url].
-
-From there, any client (in a growing list of supported programming languages)
-can declare a dependency on our protos.
+> Remote packages is the movement towards this promise. With remote packages,
+> Buf will take your modules and Protobuf plugins, add a little elbow grease,
+> and generate full-serve packages for you to consume just like any third-party
+> library in your native programming language. This means you don't have to
+> worry about Protobuf code generation at all - you can push modules to the BSR
+> and install code stubs generated from those modules using dependency
+> management tools like npm, go, mvn, and gradle.
 
 You can find all SDKs for this server [here][buf-sdks-url].
 
@@ -27,6 +30,6 @@ npm install \
 ```
 
 [buf-url]: https://buf.build/
-[buf-schema-registry-url]: https://buf.build/docs/bsr/introduction/
+[buf-schema-registry-url]: https://buf.build/docs/bsr/remote-packages/overview/
 [buf-sdks-url]:
   https://buf.build/kevinmichaelchen/react-email-server/assets/main
